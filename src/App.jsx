@@ -1,5 +1,6 @@
 import EducationSection from './components/EducationSection'
 import General from './components/General'
+import WorkSection from './components/WorkSection'
 
 function App() {
 
@@ -7,6 +8,7 @@ function App() {
     <div>
       <General/>
       <EducationSection/>
+      <WorkSection/>
     </div>
   )
 }
