@@ -7,6 +7,7 @@ function General(){
     const [email, setEmail] = useState('');
     const [phone, setPhone] = useState('');
     const [editMode, setEditMode] = useState(true);
+    const [buttonName, setButtonName] = useState("Submit")
 
     const handleFirstNameChange = e => {
         setFirstName(e.target.value);
@@ -21,7 +22,9 @@ function General(){
         setPhone(e.target.value);
     }
     const handleButtonClick = e => {
-        setEditMode(!editMode);
+        const newEditMode = !editMode
+        setEditMode(newEditMode);
+        setButtonName(newEditMode ? 'Submit' : 'Edit')
     }
 
     return (
@@ -30,7 +33,7 @@ function General(){
             <Item label='lastName' item="Last Name" value={lastName} onChange={handleLastNameChange} editMode={editMode}/>
             <Item label='email' item="Email" value={email} onChange={handleEmailChange} editMode={editMode}/>
             <Item label='phone' item="Phone Number" value={phone} onChange={handlePhoneChange} editMode={editMode}/>         
-            <button onClick={handleButtonClick}>Submit</button>
+            <button onClick={handleButtonClick}>{buttonName}</button>
         </div>
     );
 }
