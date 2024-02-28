@@ -1,3 +1,4 @@
+import EducationSection from './components/EducationSection'
 import General from './components/General'
 
 function App() {
@@ -5,6 +6,7 @@ function App() {
   return (
     <div>
       <General/>
+      <EducationSection/>
     </div>
   )
 }
